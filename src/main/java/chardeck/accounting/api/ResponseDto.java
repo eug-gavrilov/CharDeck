@@ -1,6 +1,6 @@
-package chardeck.api;
+package chardeck.accounting.api;
 
-import chardeck.domain.entities.AccountingRoles;
+import chardeck.accounting.domain.entities.AccountingRoles;
 
 import java.util.HashSet;
 

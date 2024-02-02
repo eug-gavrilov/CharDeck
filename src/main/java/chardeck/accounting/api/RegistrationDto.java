@@ -1,4 +1,4 @@
-package chardeck.api;
+package chardeck.accounting.api;
 
 public class RegistrationDto {
 
