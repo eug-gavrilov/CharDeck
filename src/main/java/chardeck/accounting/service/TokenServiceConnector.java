@@ -20,7 +20,7 @@
 //    public String createToken(AccountEntity accountEntity) {
 //
 //        RestTemplate restTemplate = new RestTemplate();
-//        String endPoint = "http://propets-token.herokuapp.com/validation/en/v1/create/entity";
+//        String endPoint = "http://token.herokuapp.com/validation/en/v1/create/entity";
 ////		String endPoint = "http://localhost:8082/validation/en/v1/create/entity";
 //
 //        URI uri;
@@ -58,18 +58,18 @@
 //        }
 //        RequestCreateTokenDto dto = new RequestCreateTokenDto(email, pass, roles);
 //
-//        ResponseEntity<String> responceFromCreateToken;
+//        ResponseEntity<String> responseFromCreateToken;
 //        try {
 //            RequestEntity<RequestCreateTokenDto> requestToCreateTokenByEmail = RequestEntity.post(uri)
 //                    .accept(MediaType.APPLICATION_JSON).body(dto);
 //
-//            responceFromCreateToken = restTemplate.exchange(uri, HttpMethod.POST,
+//            responseFromCreateToken = restTemplate.exchange(uri, HttpMethod.POST,
 //                    requestToCreateTokenByEmail, String.class);
 //        } catch (Exception e) {
 //            throw new BadTokenException();
 //        }
 //
-//        return responceFromCreateToken.getBody().toString();
+//        return responseFromCreateToken.getBody().toString();
 //    }
 //
 //    @Override
@@ -84,18 +84,18 @@
 //            throw new NoContentException();
 //        }
 //
-//        ResponseEntity<String> responceFromValidateToken;
+//        ResponseEntity<String> responseFromValidateToken;
 //        try {
 //            RequestEntity<String> requestToValidateToken = RequestEntity.post(uri).accept(MediaType.APPLICATION_JSON)
 //                    .body(token);
 //
-//            responceFromValidateToken = restTemplate.exchange(uri, HttpMethod.POST,
+//            responseFromValidateToken = restTemplate.exchange(uri, HttpMethod.POST,
 //                    requestToValidateToken, String.class);
 //        } catch (Exception e) {
 //            throw new BadTokenException();
 //        }
 //
-//        return responceFromValidateToken.getBody().toString();
+//        return responseFromValidateToken.getBody().toString();
 //    }
 //
 //    @Override
@@ -110,17 +110,17 @@
 //            throw new NoContentException();
 //        }
 //
-//        ResponseEntity<String[]> responceFromDecompile;
+//        ResponseEntity<String[]> responseFromDecompile;
 //        try {
 //            RequestEntity<String> requestToDecompile = RequestEntity.post(uri).accept(MediaType.APPLICATION_JSON)
 //                    .body(token);
 //
-//            responceFromDecompile = restTemplate.exchange(uri, HttpMethod.POST,
+//            responseFromDecompile = restTemplate.exchange(uri, HttpMethod.POST,
 //                    requestToDecompile, String[].class);
 //        } catch (Exception e) {
 //            throw new BadTokenException();
 //        }
-//        return responceFromDecompile.getBody();
+//        return responseFromDecompile.getBody();
 //    }
 //
 //    @Override
@@ -135,16 +135,16 @@
 //            throw new NoContentException();
 //        }
 //
-//        ResponseEntity<String[]> responceFromDecompile;
+//        ResponseEntity<String[]> responseFromDecompile;
 //        try {
 //            RequestEntity<String> requestToValidateAuth = RequestEntity.post(uri).accept(MediaType.APPLICATION_JSON)
 //                    .body(token);
-//            responceFromDecompile = restTemplate.exchange(uri, HttpMethod.POST,
+//            responseFromDecompile = restTemplate.exchange(uri, HttpMethod.POST,
 //                    requestToValidateAuth, String[].class);
 //        } catch (Exception e) {
 //            throw new BadTokenException();
 //        }
-//        return responceFromDecompile.getBody();
+//        return responseFromDecompile.getBody();
 //    }
 //
 //}
